@@ -11,8 +11,8 @@ import com.patrick.cursospring.domain.Cliente;
 import com.patrick.cursospring.services.ClienteService;
 
 @RestController
-@RequestMapping(value = "/categorias")
-public class CategoriaResource{
+@RequestMapping(value = "/clientes")
+public class ClienteResource {
 
 	@Autowired
 	private ClienteService service;
