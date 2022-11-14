@@ -19,7 +19,6 @@ public class ItemPedido {
 	public ItemPedido() {
 
 	}
-
 	public ItemPedido(Pedido pedido, Produto produto, double desconto, Integer quantidade, double preco) {
 		super();
 		id.setPedido(pedido);
@@ -29,9 +28,21 @@ public class ItemPedido {
 		this.preco = preco;
 	}
 
+	public double getSubTotal() {
+		return (preco - desconto ) * quantidade;
+	}
+	
 	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido();
+	}
+	
+	public void setPedido(Pedido pedido) {
+		id.setPedido(pedido);
+	}
+	
+	public void setProduto(Produto produto) {
+		id.setProduto(produto);
 	}
 
 	public Produto getProduto() {
